@@ -62,7 +62,6 @@ header,
 p {
     font-size: 1.1rem;
     text-align: center;
-
     border-radius: 10px;
     word-wrap: break-word;
     margin: 0;
@@ -91,6 +90,7 @@ table {
     td {
         border: 2px solid var(--white);
         padding: 0;
+        word-wrap: break-word;
     }
 
     td {
@@ -115,6 +115,11 @@ table {
         border: none;
         background-color: transparent;
         text-align: center;
+        word-wrap: break-word;
+    }
+    td{
+        word-wrap: break-word;
+        max-width: 20%;
     }
 
     tr:nth-child(2) td:first-child {
@@ -134,22 +139,11 @@ table {
     }
 
 
-.last-column {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
+}
+footer{
+    button{
+        font-size: 22px;
+        font-weight: bold;
+    }
 }
 
-.last-column span:first-child {
-    flex-grow: 1;  
-    margin-right: 10px; 
-}
-
-.last-column span:last-child {
-    flex-shrink: 0;  
-    width: 50px; 
-    text-align: center; 
-}
-
-}
