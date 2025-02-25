@@ -2,6 +2,7 @@
     --blue: #41b6fe;
     --white: white;
     --gray: rgb(236 242 245);
+    --blue-opaset: rgb(215, 235, 247);
 }
 
 .main-bg {
@@ -15,6 +16,10 @@
 
 .bg-white {
     background-color: var(--white);
+}
+
+.text-white {
+    color: var(--white);
 }
 
 .center {
@@ -47,30 +52,104 @@ main {
     padding: 5rem 0;
 }
 
-header {
-    
+header,
+.text-w {
+    p {
+        min-width: 50%;
+    }
+}
+
+p {
+    font-size: 1.1rem;
+    text-align: center;
+
+    border-radius: 10px;
+    word-wrap: break-word;
+    margin: 0;
+}
+
+@media (max-width: 400px) {
+    P {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    P {
+        font-size: 1rem;
+    }
+}
+
+table {
+    width: 100%;
 
     p {
-        font-size: 1.1rem;
+        margin: 0px 5px 10px 5px;
+    }
+
+    table,
+    td {
+        border: 2px solid var(--white);
+        padding: 0;
+    }
+
+    td {
+        padding: 10px;
         text-align: center;
-        min-width: 50%;
-        border-radius: 10px;
-        word-wrap: break-word;
-        margin: 0;
     }
 
-    @media (max-width: 400px) {
-        P {
-            font-size: 1rem;
-        }
+    tr:nth-child(even) {
+        background-color: var(--gray);
     }
 
-    @media (max-width: 600px) {
-        P {
-            font-size: 1rem;
-        }
+    tr:nth-child(odd):not(:first-child) {
+        background-color: var(--blue-opaset);
+    }
+
+    .last-column {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    th {
+        border: none;
+        background-color: transparent;
+        text-align: center;
+    }
+
+    tr:nth-child(2) td:first-child {
+        border-top-left-radius: 10px;
+    }
+
+    tr:nth-child(2) td:last-child {
+        border-top-right-radius: 10px;
+    }
+
+    tr:last-child td:first-child {
+        border-bottom-left-radius: 10px;
+    }
+
+    tr:last-child td:last-child {
+        border-bottom-right-radius: 10px;
     }
 
 
+.last-column {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.last-column span:first-child {
+    flex-grow: 1;  
+    margin-right: 10px; 
+}
+
+.last-column span:last-child {
+    flex-shrink: 0;  
+    width: 50px; 
+    text-align: center; 
+}
 
 }
